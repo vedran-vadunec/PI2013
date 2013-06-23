@@ -44,7 +44,10 @@ namespace Pi_projekt
 
         }
 
-       
+        private void jedinica_mjereBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

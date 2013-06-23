@@ -53,5 +53,20 @@ namespace Pi_projekt
             forma.Show();
         }
 
+        private void artiklBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.artiklBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pIDatabaseDataSet);
+
+        }
+
+        private void frmArtikli_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pIDatabaseDataSet.Artikl' table. You can move, or remove it, as needed.
+            this.artiklTableAdapter.Fill(this.pIDatabaseDataSet.Artikl);
+
+        }
+
     }
 }

@@ -28,5 +28,20 @@ namespace Pi_projekt
             frmPromijeni_poslovnog_partnera forma = new frmPromijeni_poslovnog_partnera();
             forma.Show();
         }
+
+        private void poslovni_partnerBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.poslovni_partnerBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pIDatabaseDataSet);
+
+        }
+
+        private void frmPoslovni_partneri_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pIDatabaseDataSet.Poslovni_partner' table. You can move, or remove it, as needed.
+            this.poslovni_partnerTableAdapter.Fill(this.pIDatabaseDataSet.Poslovni_partner);
+
+        }
     }
 }

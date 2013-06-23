@@ -62,7 +62,7 @@
             // 
             // btnObirsi
             // 
-            this.btnObirsi.Location = new System.Drawing.Point(282, 257);
+            this.btnObirsi.Location = new System.Drawing.Point(255, 257);
             this.btnObirsi.Name = "btnObirsi";
             this.btnObirsi.Size = new System.Drawing.Size(75, 23);
             this.btnObirsi.TabIndex = 6;
@@ -71,7 +71,7 @@
             // 
             // btnPromijeni
             // 
-            this.btnPromijeni.Location = new System.Drawing.Point(201, 257);
+            this.btnPromijeni.Location = new System.Drawing.Point(174, 257);
             this.btnPromijeni.Name = "btnPromijeni";
             this.btnPromijeni.Size = new System.Drawing.Size(75, 23);
             this.btnPromijeni.TabIndex = 5;
@@ -81,7 +81,7 @@
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(120, 257);
+            this.btnDodaj.Location = new System.Drawing.Point(93, 257);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(75, 23);
             this.btnDodaj.TabIndex = 4;
@@ -146,9 +146,10 @@
             this.jedinica_mjereBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.jedinica_mjereBindingNavigator.Name = "jedinica_mjereBindingNavigator";
             this.jedinica_mjereBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.jedinica_mjereBindingNavigator.Size = new System.Drawing.Size(369, 25);
+            this.jedinica_mjereBindingNavigator.Size = new System.Drawing.Size(341, 25);
             this.jedinica_mjereBindingNavigator.TabIndex = 7;
             this.jedinica_mjereBindingNavigator.Text = "bindingNavigator1";
+            this.jedinica_mjereBindingNavigator.RefreshItems += new System.EventHandler(this.jedinica_mjereBindingNavigator_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -246,9 +247,6 @@
             // 
             // jedinica_mjereDataGridView
             // 
-            this.jedinica_mjereDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.jedinica_mjereDataGridView.AutoGenerateColumns = false;
             this.jedinica_mjereDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.jedinica_mjereDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -257,7 +255,7 @@
             this.jedinica_mjereDataGridView.DataSource = this.jedinica_mjereBindingSource;
             this.jedinica_mjereDataGridView.Location = new System.Drawing.Point(12, 28);
             this.jedinica_mjereDataGridView.Name = "jedinica_mjereDataGridView";
-            this.jedinica_mjereDataGridView.Size = new System.Drawing.Size(345, 220);
+            this.jedinica_mjereDataGridView.Size = new System.Drawing.Size(318, 220);
             this.jedinica_mjereDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -266,7 +264,6 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "ID_mjere";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -278,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 292);
+            this.ClientSize = new System.Drawing.Size(341, 292);
             this.Controls.Add(this.jedinica_mjereDataGridView);
             this.Controls.Add(this.jedinica_mjereBindingNavigator);
             this.Controls.Add(this.btnObirsi);

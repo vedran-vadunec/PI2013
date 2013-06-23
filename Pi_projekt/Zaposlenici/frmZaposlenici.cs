@@ -28,5 +28,20 @@ namespace Pi_projekt
             frmPromijeni_zaposlenika forma = new frmPromijeni_zaposlenika();
             forma.Show();
         }
+
+        private void zaposlenikBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.zaposlenikBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pIDatabaseDataSet);
+
+        }
+
+        private void frmZaposlenici_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pIDatabaseDataSet.Zaposlenik' table. You can move, or remove it, as needed.
+            this.zaposlenikTableAdapter.Fill(this.pIDatabaseDataSet.Zaposlenik);
+
+        }
     }
 }
