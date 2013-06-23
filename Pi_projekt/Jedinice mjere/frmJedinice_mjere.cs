@@ -29,5 +29,22 @@ namespace Pi_projekt
             forma.Show();
         }
 
+        private void jedinica_mjereBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.jedinica_mjereBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pIDatabaseDataSet);
+
+        }
+
+        private void frmJedinice_mjere_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pIDatabaseDataSet.Jedinica_mjere' table. You can move, or remove it, as needed.
+            this.jedinica_mjereTableAdapter.Fill(this.pIDatabaseDataSet.Jedinica_mjere);
+
+        }
+
+       
+
     }
 }
